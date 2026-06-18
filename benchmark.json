@@ -1,0 +1,32 @@
+{
+  "id": "bm_df45beea5f8ab8d9",
+  "title": "ECDSA.fail secp256k1 Point Addition",
+  "description": "Official ECDSA.fail reversible elliptic-curve point-addition challenge. Lower score is Toffoli count times peak qubits.",
+  "objective": "min",
+  "runnerKind": "repo-command",
+  "upstream": {
+    "url": "https://github.com/ecdsafail/ecdsafail-challenge",
+    "ref": "1caf521514708003e5cfe5313fa0730a18291008"
+  },
+  "editablePaths": [
+    "src/point_add"
+  ],
+  "setupCommand": [
+    "bash",
+    "-lc",
+    "./setup.sh"
+  ],
+  "benchmarkCommand": [
+    "bash",
+    "-lc",
+    "./benchmark.sh"
+  ],
+  "scorePath": "score.json",
+  "scoreSchema": {
+    "score": "number",
+    "toffoli": "number?",
+    "qubits": "number?"
+  },
+  "submit": "/api/benchmarks/bm_df45beea5f8ab8d9/commit",
+  "apiUrl": "https://quorum-fail-k91q6wslu-samprivs-projects.vercel.app"
+}
